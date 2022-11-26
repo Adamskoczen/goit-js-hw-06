@@ -1,27 +1,27 @@
 const formLogin = document.querySelector('.login-form');
 
+const formData = {
+    email: "",
+    password: "",
+    get showEmail() {
+        console.log(this.email);
+    },
+    get showPassword() {
+        console.log(this.password);
+    },
+};
+
 formLogin.addEventListener('submit', e => {
     e.preventDefault();
     const {
         elements: { email, password }
     } = e.currentTarget;
     if (email.value === "" || password.value === "") {
-        alert('Uzupełnij formularz!');
+        return alert('Uzupełnij formularz!');
     };
-    formData.changeMail = email.value;
-    formData.changePassword = password.value;
-    console.log(formData.email);
-    console.log(formData.password);
+    formData.email = email.value;
+    formData.password = password.value;
+    formData.showEmail;
+    formData.showPassword;
     formLogin.reset();
 });
-
-const formData = {
-    email,
-    password,
-    changeMail(newMail) {
-        this.email = changeEmail;
-    },
-    changePassword(newPassword) {
-        this.password = this.changePassword;
-    },
-};

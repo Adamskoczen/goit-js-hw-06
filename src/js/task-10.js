@@ -1,5 +1,7 @@
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
 
 const inputIn = document.querySelector('input');
@@ -10,7 +12,6 @@ const boxes = document.querySelector('#boxes');
 let divCounter = 30;
 
 const createBoxes = amount => {
-  console.log(amount)
     for (let i = 0; i < amount ; i++) {
     const divNew = document.createElement('div');
     divNew.style.backgroundColor = getRandomHexColor();

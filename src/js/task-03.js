@@ -20,5 +20,5 @@ const createLi = document.createElement("img");
 createLi.setAttribute('src', image.url);
 createLi.setAttribute('alt', image.alt);
 createLi.classList.add('gallery__img');
-galleryImg.append(createLi);
+galleryImg.insertAdjacentElement('beforeend', createLi);
 });

@@ -12,6 +12,6 @@ const liClass = document.querySelector('#ingredients');
 ingredients.forEach(ingredient => {
 const createLi = document.createElement("li");
 createLi.textContent = ingredient;
-createLi.classList.add('list');
+createLi.classList.add('item');
 liClass.append(createLi);
 });
