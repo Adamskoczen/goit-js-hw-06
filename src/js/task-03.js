@@ -16,9 +16,17 @@ const images = [
 const galleryImg = document.querySelector('.gallery');
 
 images.forEach(image => {
-const createLi = document.createElement("img");
-createLi.setAttribute('src', image.url);
-createLi.setAttribute('alt', image.alt);
-createLi.classList.add('gallery__img');
+const createLi = document.createElement("li");
+const createImg = document.createElement("img");
+createImg.setAttribute('src', image.url);
+createImg.setAttribute('alt', image.alt);
+createImg.classList.add('gallery__img');
+createLi.appendChild(createImg);
 galleryImg.insertAdjacentElement('beforeend', createLi);
 });
+
+// const galleryImg = document.querySelector('.gallery');
+
+// const markup = images.map(image => {
+//   console.log(image)
+// })

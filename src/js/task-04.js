@@ -5,7 +5,7 @@ const counterSpan = document.querySelector('#value');
 let counterValue = 0;
 
 const counterDcr = () => {
-    counterValue--;
+    if (counterValue > 0) counterValue--;
     counterSpan.textContent = counterValue;
 };
 
